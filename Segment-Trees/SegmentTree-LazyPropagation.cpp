@@ -72,8 +72,8 @@ int update(int* segTree,int s,int e,int x,int y,int z,int segIdx)
         segTree[segIdx] += (e-s+1)*z;
         if(s!=e)
         {
-            lazy[2*segIdx + 1] = z;
-            lazy[2*segIdx + 2] = z;
+            lazy[2*segIdx + 1] += z;
+            lazy[2*segIdx + 2] += z;
         }
         return segTree[segIdx];
     }
